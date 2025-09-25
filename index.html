@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeZone - Premium Watches</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>TimeZone</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="login.html" class="nav-link">Login</a></li>
+                    <li><a href="signup.html" class="nav-link">Sign Up</a></li>
+                    <li><a href="cart.html" class="nav-link cart-link">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover Timeless Elegance</h1>
+                <p>Premium watches crafted for the modern lifestyle. Experience luxury, precision, and style.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary">Shop Now</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/images/watch_luxury_men.jpg" alt="Luxury Watch">
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <figure>
+                            <img src="/images/watch_mens_stylish.jpg" alt="Men's Stylish Watch">
+                        </figure>
+                        <div class="product-info">
+                            <h3>Classic Men's Chronograph</h3>
+                            <p>Sophisticated chronograph with stainless steel case and leather strap.</p>
+                            <div class="price">$499.99</div>
+                            <button class="btn btn-primary add-to-cart" data-product="mens-chronograph">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <figure>
+                            <img src="/images/watch_womens_elegant.jpg" alt="Women's Elegant Watch">
+                        </figure>
+                        <div class="product-info">
+                            <h3>Elegant Women's Mesh Watch</h3>
+                            <p>Timeless elegance with rose gold mesh strap and minimalist design.</p>
+                            <div class="price">$189.99</div>
+                            <button class="btn btn-primary add-to-cart" data-product="womens-mesh">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <figure>
+                            <img src="/images/watch_womens_gold.jpg" alt="Women's Gold Watch">
+                        </figure>
+                        <div class="product-info">
+                            <h3>Vintage Gold Collection</h3>
+                            <p>Exquisite gold-toned vintage design with intricate link bracelet.</p>
+                            <div class="price">$329.99</div>
+                            <button class="btn btn-primary add-to-cart" data-product="womens-gold">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="promotional-video">
+            <div class="container">
+                <h2>Experience Our Craftsmanship</h2>
+                <div class="video-container">
+                    <video controls poster="/images/watch_luxury_men.jpg">
+                        <source src="/video/promotional_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="countdown-section">
+            <div class="container">
+                <h2>Limited Time Offer</h2>
+                <p>Get 20% off on all premium watches. Offer ends in:</p>
+                <div id="countdown-timer" class="countdown">
+                    <div class="time-unit">
+                        <span id="days">00</span>
+                        <label>Days</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="hours">00</span>
+                        <label>Hours</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="minutes">00</span>
+                        <label>Minutes</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="seconds">00</span>
+                        <label>Seconds</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="testimonials">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonial-grid">
+                    <blockquote class="testimonial">
+                        <p>"Exceptional quality and timeless design. My TimeZone watch has become my daily companion."</p>
+                        <cite>- Sarah Johnson</cite>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>"Outstanding craftsmanship and attention to detail. Highly recommend TimeZone watches."</p>
+                        <cite>- Michael Chen</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TimeZone</h3>
+                    <p>Premium watches for the modern lifestyle. Crafted with precision and designed for elegance.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+

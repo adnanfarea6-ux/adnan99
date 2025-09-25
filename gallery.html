@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - TimeZone</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .gallery-section {
+            padding: 4rem 0;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-overlay h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-overlay p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .lightbox img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        
+        .lightbox-prev {
+            left: -60px;
+        }
+        
+        .lightbox-next {
+            right: -60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>TimeZone</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="login.html" class="nav-link">Login</a></li>
+                    <li><a href="signup.html" class="nav-link">Sign Up</a></li>
+                    <li><a href="cart.html" class="nav-link cart-link">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Watch Gallery</h1>
+                <p>Explore our stunning collection of timepieces</p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(0)">
+                        <img src="/images/watch_luxury_men.jpg" alt="Luxury Men's Watch">
+                        <div class="gallery-overlay">
+                            <h3>Executive Collection</h3>
+                            <p>Premium stainless steel chronograph with sapphire crystal and water resistance.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox(1)">
+                        <img src="/images/watch_mens_stylish.jpg" alt="Men's Stylish Watch">
+                        <div class="gallery-overlay">
+                            <h3>Classic Chronograph</h3>
+                            <p>Sophisticated design perfect for business and casual wear.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox(2)">
+                        <img src="/images/watch_womens_elegant.jpg" alt="Women's Elegant Watch">
+                        <div class="gallery-overlay">
+                            <h3>Elegant Mesh</h3>
+                            <p>Timeless elegance with rose gold mesh strap and minimalist design.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox(3)">
+                        <img src="/images/watch_womens_gold.jpg" alt="Women's Gold Watch">
+                        <div class="gallery-overlay">
+                            <h3>Vintage Gold</h3>
+                            <p>Exquisite gold-toned vintage design with intricate link bracelet.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox(4)">
+                        <img src="/images/watch_luxury_men.jpg" alt="Sport Watch">
+                        <div class="gallery-overlay">
+                            <h3>Sport Pro Series</h3>
+                            <p>Durable sports watch built for active lifestyles with advanced features.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox(5)">
+                        <img src="/images/watch_womens_elegant.jpg" alt="Classic Women's Watch">
+                        <div class="gallery-overlay">
+                            <h3>Classic Leather</h3>
+                            <p>Timeless design with genuine leather strap and silver-toned case.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">&#8249;</button>
+            <img id="lightbox-img" src="" alt="">
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">&#8250;</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TimeZone</h3>
+                    <p>Premium watches for the modern lifestyle. Crafted with precision and designed for elegance.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <script>
+        // Gallery lightbox functionality
+        const galleryImages = [
+            '/images/watch_luxury_men.jpg',
+            '/images/watch_mens_stylish.jpg',
+            '/images/watch_womens_elegant.jpg',
+            '/images/watch_womens_gold.jpg',
+            '/images/watch_luxury_men.jpg',
+            '/images/watch_womens_elegant.jpg'
+        ];
+        
+        let currentImageIndex = 0;
+        
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = galleryImages[index];
+            lightbox.classList.add('active');
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
+        }
+        
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
+        }
+        
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            }
+        });
+        
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
+

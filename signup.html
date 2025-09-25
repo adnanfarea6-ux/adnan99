@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - TimeZone</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>TimeZone</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="login.html" class="nav-link">Login</a></li>
+                    <li><a href="signup.html" class="nav-link active">Sign Up</a></li>
+                    <li><a href="cart.html" class="nav-link cart-link">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-form-wrapper">
+                        <h1>Create Account</h1>
+                        <p>Join TimeZone and discover premium timepieces</p>
+                        
+                        <form id="signup-form" class="auth-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name *</label>
+                                    <input type="text" id="first-name" name="firstName" required>
+                                    <span class="error-message" id="first-name-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="last-name">Last Name *</label>
+                                    <input type="text" id="last-name" name="lastName" required>
+                                    <span class="error-message" id="last-name-error"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="signup-email">Email Address *</label>
+                                <input type="email" id="signup-email" name="email" required>
+                                <span class="error-message" id="signup-email-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone-number">Phone Number</label>
+                                <input type="tel" id="phone-number" name="phone" placeholder="+1 (555) 123-4567">
+                                <span class="error-message" id="phone-number-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="signup-password">Password *</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="signup-password" name="password" required>
+                                    <button type="button" class="password-toggle" id="signup-password-toggle">
+                                        <span class="show-text">Show</span>
+                                        <span class="hide-text" style="display: none;">Hide</span>
+                                    </button>
+                                </div>
+                                <span class="error-message" id="signup-password-error"></span>
+                                <div class="password-requirements">
+                                    <p>Password must contain:</p>
+                                    <ul>
+                                        <li id="length-req">At least 8 characters</li>
+                                        <li id="uppercase-req">One uppercase letter</li>
+                                        <li id="lowercase-req">One lowercase letter</li>
+                                        <li id="number-req">One number</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm Password *</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="confirm-password" name="confirmPassword" required>
+                                    <button type="button" class="password-toggle" id="confirm-password-toggle">
+                                        <span class="show-text">Show</span>
+                                        <span class="hide-text" style="display: none;">Hide</span>
+                                    </button>
+                                </div>
+                                <span class="error-message" id="confirm-password-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="birth-date">Date of Birth</label>
+                                <input type="date" id="birth-date" name="birthDate">
+                                <span class="error-message" id="birth-date-error"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms-agreement" name="terms" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a> *
+                                </label>
+                                <span class="error-message" id="terms-agreement-error"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="marketing-emails" name="marketing">
+                                    <span class="checkmark"></span>
+                                    I would like to receive marketing emails about new products and special offers
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-full-width">Create Account</button>
+                            </div>
+                        </form>
+
+                        <div class="auth-divider">
+                            <span>or</span>
+                        </div>
+
+                        <div class="social-login">
+                            <button class="btn btn-social btn-google">
+                                <span>Sign up with Google</span>
+                            </button>
+                            <button class="btn btn-social btn-facebook">
+                                <span>Sign up with Facebook</span>
+                            </button>
+                        </div>
+
+                        <div class="auth-footer">
+                            <p>Already have an account? <a href="login.html">Sign in here</a></p>
+                        </div>
+                    </div>
+
+                    <div class="auth-image">
+                        <img src="/images/watch_womens_elegant.jpg" alt="TimeZone Watches">
+                        <div class="auth-image-overlay">
+                            <h2>Join Our Community</h2>
+                            <p>Become part of the TimeZone family and enjoy exclusive benefits and premium service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="signup-benefits">
+            <div class="container">
+                <h2>Member Benefits</h2>
+                <div class="benefits-grid">
+                    <article class="benefit-item">
+                        <h3>Welcome Discount</h3>
+                        <p>Get 10% off your first purchase when you create an account.</p>
+                    </article>
+                    <article class="benefit-item">
+                        <h3>Free Shipping</h3>
+                        <p>Enjoy free shipping on all orders over $200 as a registered member.</p>
+                    </article>
+                    <article class="benefit-item">
+                        <h3>Birthday Rewards</h3>
+                        <p>Receive a special birthday discount and exclusive offers during your birthday month.</p>
+                    </article>
+                    <article class="benefit-item">
+                        <h3>Priority Support</h3>
+                        <p>Get priority customer support and faster response times for all inquiries.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TimeZone</h3>
+                    <p>Premium watches for the modern lifestyle. Crafted with precision and designed for elegance.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+

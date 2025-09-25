@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TimeZone</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>TimeZone</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="login.html" class="nav-link active">Login</a></li>
+                    <li><a href="signup.html" class="nav-link">Sign Up</a></li>
+                    <li><a href="cart.html" class="nav-link cart-link">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-form-wrapper">
+                        <h1>Welcome Back</h1>
+                        <p>Sign in to your TimeZone account</p>
+                        
+                        <form id="login-form" class="auth-form" novalidate>
+                            <div class="form-group">
+                                <label for="login-email">Email Address *</label>
+                                <input type="email" id="login-email" name="email" required>
+                                <span class="error-message" id="login-email-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="login-password">Password *</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="login-password" name="password" required>
+                                    <button type="button" class="password-toggle" id="login-password-toggle">
+                                        <span class="show-text">Show</span>
+                                        <span class="hide-text" style="display: none;">Hide</span>
+                                    </button>
+                                </div>
+                                <span class="error-message" id="login-password-error"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="remember-me" name="remember">
+                                    <span class="checkmark"></span>
+                                    Remember me
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-full-width">Sign In</button>
+                            </div>
+
+                            <div class="form-links">
+                                <a href="#" class="forgot-password">Forgot your password?</a>
+                            </div>
+                        </form>
+
+                        <div class="auth-divider">
+                            <span>or</span>
+                        </div>
+
+                        <div class="social-login">
+                            <button class="btn btn-social btn-google">
+                                <span>Continue with Google</span>
+                            </button>
+                            <button class="btn btn-social btn-facebook">
+                                <span>Continue with Facebook</span>
+                            </button>
+                        </div>
+
+                        <div class="auth-footer">
+                            <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+                        </div>
+                    </div>
+
+                    <div class="auth-image">
+                        <img src="/images/watch_luxury_men.jpg" alt="TimeZone Watches">
+                        <div class="auth-image-overlay">
+                            <h2>Premium Timepieces</h2>
+                            <p>Discover our collection of luxury watches crafted for the discerning individual.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="login-benefits">
+            <div class="container">
+                <h2>Why Create an Account?</h2>
+                <div class="benefits-grid">
+                    <article class="benefit-item">
+                        <h3>Faster Checkout</h3>
+                        <p>Save your shipping and billing information for quick and easy purchases.</p>
+                    </article>
+                    <article class="benefit-item">
+                        <h3>Order History</h3>
+                        <p>Track your orders and view your complete purchase history in one place.</p>
+                    </article>
+                    <article class="benefit-item">
+                        <h3>Exclusive Offers</h3>
+                        <p>Get access to member-only discounts and early access to new collections.</p>
+                    </article>
+                    <article class="benefit-item">
+                        <h3>Wishlist</h3>
+                        <p>Save your favorite watches and get notified when they go on sale.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TimeZone</h3>
+                    <p>Premium watches for the modern lifestyle. Crafted with precision and designed for elegance.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+

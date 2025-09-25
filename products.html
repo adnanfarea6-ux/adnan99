@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - TimeZone</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>TimeZone</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link active">Products</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="login.html" class="nav-link">Login</a></li>
+                    <li><a href="signup.html" class="nav-link">Sign Up</a></li>
+                    <li><a href="cart.html" class="nav-link cart-link">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our Watch Collection</h1>
+                <p>Discover timepieces crafted for every occasion</p>
+            </div>
+        </section>
+
+        <section class="product-filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Watches</button>
+                    <button class="filter-btn" data-filter="men">Men's Watches</button>
+                    <button class="filter-btn" data-filter="women">Women's Watches</button>
+                    <button class="filter-btn" data-filter="luxury">Luxury Collection</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-catalog">
+            <div class="container">
+                <div class="products-grid">
+                    <article class="product-card" data-category="men luxury">
+                        <figure>
+                            <img src="/images/watch_luxury_men.jpg" alt="Luxury Men's Watch">
+                        </figure>
+                        <div class="product-info">
+                            <h3>Executive Chronograph</h3>
+                            <p class="product-description">Premium stainless steel chronograph with sapphire crystal and water resistance up to 200m. Features precise quartz movement and elegant black dial.</p>
+                            <div class="product-details" style="display: none;">
+                                <table class="specs-table">
+                                    <tr>
+                                        <td>Case Material:</td>
+                                        <td>Stainless Steel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Movement:</td>
+                                        <td>Swiss Quartz</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Water Resistance:</td>
+                                        <td>200m</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Strap:</td>
+                                        <td>Genuine Leather</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="price">$749.99</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary toggle-details">View Details</button>
+                                <button class="btn btn-primary add-to-cart" data-product="executive-chronograph">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="men">
+                        <figure>
+                            <img src="/images/watch_mens_stylish.jpg" alt="Men's Stylish Watch">
+                        </figure>
+                        <div class="product-info">
+                            <h3>Classic Men's Chronograph</h3>
+                            <p class="product-description">Sophisticated chronograph with stainless steel case and comfortable leather strap. Perfect for business and casual wear.</p>
+                            <div class="product-details" style="display: none;">
+                                <table class="specs-table">
+                                    <tr>
+                                        <td>Case Material:</td>
+                                        <td>Stainless Steel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Movement:</td>
+                                        <td>Quartz</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Water Resistance:</td>
+                                        <td>50m</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Strap:</td>
+                                        <td>Leather</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="price">$499.99</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary toggle-details">View Details</button>
+                                <button class="btn btn-primary add-to-cart" data-product="mens-chronograph">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="women">
+                        <figure>
+                            <img src="/images/watch_womens_elegant.jpg" alt="Women's Elegant Watch">
+                        </figure>
+                        <div class="product-info">
+                            <h3>Elegant Women's Mesh Watch</h3>
+                            <p class="product-description">Timeless elegance with rose gold mesh strap and minimalist blue dial. Perfect for both casual and formal occasions.</p>
+                            <div class="product-details" style="display: none;">
+                                <table class="specs-table">
+                                    <tr>
+                                        <td>Case Material:</td>
+                                        <td>Rose Gold Plated</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Movement:</td>
+                                        <td>Quartz</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Water Resistance:</td>
+                                        <td>30m</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Strap:</td>
+                                        <td>Mesh Steel</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="price">$189.99</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary toggle-details">View Details</button>
+                                <button class="btn btn-primary add-to-cart" data-product="womens-mesh">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="women luxury">
+                        <figure>
+                            <img src="/images/watch_womens_gold.jpg" alt="Women's Gold Watch">
+                        </figure>
+                        <div class="product-info">
+                            <h3>Vintage Gold Collection</h3>
+                            <p class="product-description">Exquisite gold-toned vintage design with intricate link bracelet. A perfect statement piece combining classic design with modern reliability.</p>
+                            <div class="product-details" style="display: none;">
+                                <table class="specs-table">
+                                    <tr>
+                                        <td>Case Material:</td>
+                                        <td>Gold Plated</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Movement:</td>
+                                        <td>Quartz</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Water Resistance:</td>
+                                        <td>30m</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Strap:</td>
+                                        <td>Gold Link Bracelet</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="price">$329.99</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary toggle-details">View Details</button>
+                                <button class="btn btn-primary add-to-cart" data-product="womens-gold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="men">
+                        <figure>
+                            <img src="/images/watch_luxury_men.jpg" alt="Sport Watch">
+                        </figure>
+                        <div class="product-info">
+                            <h3>Sport Pro Series</h3>
+                            <p class="product-description">Durable sports watch with titanium case and rubber strap. Built for active lifestyles with advanced timing features.</p>
+                            <div class="product-details" style="display: none;">
+                                <table class="specs-table">
+                                    <tr>
+                                        <td>Case Material:</td>
+                                        <td>Titanium</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Movement:</td>
+                                        <td>Digital Quartz</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Water Resistance:</td>
+                                        <td>300m</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Strap:</td>
+                                        <td>Rubber</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="price">$399.99</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary toggle-details">View Details</button>
+                                <button class="btn btn-primary add-to-cart" data-product="sport-pro">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="women">
+                        <figure>
+                            <img src="/images/watch_womens_elegant.jpg" alt="Classic Women's Watch">
+                        </figure>
+                        <div class="product-info">
+                            <h3>Classic Leather Collection</h3>
+                            <p class="product-description">Timeless design with genuine leather strap and silver-toned case. An everyday essential that complements any outfit.</p>
+                            <div class="product-details" style="display: none;">
+                                <table class="specs-table">
+                                    <tr>
+                                        <td>Case Material:</td>
+                                        <td>Stainless Steel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Movement:</td>
+                                        <td>Quartz</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Water Resistance:</td>
+                                        <td>50m</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Strap:</td>
+                                        <td>Genuine Leather</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="price">$249.99</div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary toggle-details">View Details</button>
+                                <button class="btn btn-primary add-to-cart" data-product="classic-leather">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TimeZone</h3>
+                    <p>Premium watches for the modern lifestyle. Crafted with precision and designed for elegance.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
